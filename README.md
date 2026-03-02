@@ -34,7 +34,7 @@ After that, you can view the corresponding image topic in RViz2.
 
 Now run the project: first start the PX4 UAV simulation model with a camera, bridge the Gazebo camera topic to ROS 2 (as shown in the manual bridging tutorial above), and then run:
 ```bash
-ros2 run gazebo_yolo_detection gazebo_yolo_detector.py
+ros2 run gazebo_yolo_detection yolo_detector.py
 ```
 Note: only the source code of gazebo_yolo_detector.py is provided. You need to create it as a ROS2 node yourself before it can be run via ros2 run.
 Then you can observe the UAV camera feed in RViz2. You can also add some objects in the world to verify the YOLO detection results.
@@ -47,4 +47,4 @@ and then run
 python3 gaze_visualization_node.py
 ```
 in another terminal. You can then control the UAV from the first-person view in RViz2 by drawing trajectories with hand gestures.
-Note: the topic names used in gazebo_yolo_detector.py, IntuFly.py, and gaze_visualization_node.py need to be modified according to your actual topic names.
+Note: the topic names used in yolo_detector.py, IntuFly.py, and gaze_visualization_node.py need to be modified according to your actual topic names.
