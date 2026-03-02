@@ -10,14 +10,20 @@ mkdir -p ~/ws/src
 cd ~/ws/src
 ```
 3. Clone the source code
+```bash
 git clone https://github.com/gazebosim/ros_gz.git -b humble
+```
 4. Install dependencies
+```bash
 cd ~/ws
 rosdep install -r --from-paths src -i -y --rosdistro humble
+```
 5. Build the workspace
+```bash
 source /opt/ros/humble/setup.bash
 cd ~/ws
 colcon build
+```
 Then start the PX4 simulation and bridge:
 cd PX4-Autopilot/
 make px4_sitl gz_x500_mono_cam
