@@ -40,11 +40,11 @@ Note: only the source code of gazebo_yolo_detector.py is provided. You need to c
 Then you can observe the UAV camera feed in RViz2. You can also add some objects in the world to verify the YOLO detection results.
 After connecting the D435, run 
 ```bash
-python3 allhand.py
+python3 IntuFly.py
 ```
 and then run 
 ```bash
 python3 gaze_visualization_node.py
 ```
 in another terminal. You can then control the UAV from the first-person view in RViz2 by drawing trajectories with hand gestures.
-Note: the topic names used in gazebo_yolo_detector.py, allhand.py, and gaze_visualization_node.py need to be modified according to your actual topic names.
+Note: the topic names used in gazebo_yolo_detector.py, IntuFly.py, and gaze_visualization_node.py need to be modified according to your actual topic names.
