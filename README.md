@@ -25,14 +25,26 @@ cd ~/ws
 colcon build
 ```
 Then start the PX4 simulation and bridge:
+```bash
 cd PX4-Autopilot/
 make px4_sitl gz_x500_mono_cam
 ros2 run ros_gz_bridge parameter_bridge /world/default/model/x500_mono_cam_0/link/camera_link/sensor/imager/image@sensor_msgs/msg/Image@gz.msgs.Image
+```
 After that, you can view the corresponding image topic in RViz2.
 
 Now run the project: first start the PX4 UAV simulation model with a camera, bridge the Gazebo camera topic to ROS 2 (as shown in the manual bridging tutorial above), and then run:
+```bash
 ros2 run gazebo_yolo_detection gazebo_yolo_detector.py
-Note: only the source code of gazebo_yolo_detector.py is provided. You need to create it as a ROS 2 node (Node) yourself before it can be run via ros2 run.
+```
+Note: only the source code of gazebo_yolo_detector.py is provided. You need to create it as a ROS2 node yourself before it can be run via ros2 run.
 Then you can observe the UAV camera feed in RViz2. You can also add some objects in the world to verify the YOLO detection results.
-After connecting the D435, run python3 allhand.py, and then run python3 gaze_visualization_node.py in another terminal. You can then control the UAV from the first-person view in RViz2 by drawing trajectories with hand gestures.
+After connecting the D435, run 
+```bash
+python3 allhand.py
+```
+and then run 
+```bash
+python3 gaze_visualization_node.py
+```
+in another terminal. You can then control the UAV from the first-person view in RViz2 by drawing trajectories with hand gestures.
 Note: the topic names used in gazebo_yolo_detector.py, allhand.py, and gaze_visualization_node.py need to be modified according to your actual topic names.
