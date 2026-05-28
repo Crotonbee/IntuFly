@@ -8,6 +8,10 @@ hands draw continuous 3D translation paths, while gaze controls yaw and target l
 
 This project is recommended to run on Ubuntu 22.04, Gazebo Sim 8.9.0 (Harmonic), and ROS 2 Humble. Please download the PX4 source code in advance.
 When using PX4 v1.14+ on Ubuntu 22.04, the Gazebo instance automatically downloaded by PX4 may not communicate with ROS 2 via the bridge package, so a manual bridge is required.
+
+## Demo Video
+https://github.com/user-attachments/assets/6f83cf70-089e-4e8b-9975-3e0801f7cce7
+
 1. Set environment variables
 ```bash
 export GZ_VERSION=harmonic
