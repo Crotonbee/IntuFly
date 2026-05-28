@@ -1,3 +1,9 @@
+# IntuFly: Intuitive Continuous Hand–Gaze Control for UAVs
+
+**ICRA 2026 Contributed Paper**
+
+IntuFly is an intuitive hand–gaze UAV control framework:  
+hands draw continuous 3D translation paths, while gaze controls yaw and target locking
 This project is recommended to run on Ubuntu 22.04, Gazebo Sim 8.9.0 (Harmonic), and ROS 2 Humble. Please download the PX4 source code in advance.
 When using PX4 v1.14+ on Ubuntu 22.04, the Gazebo instance automatically downloaded by PX4 may not communicate with ROS 2 via the bridge package, so a manual bridge is required.
 1. Set environment variables
